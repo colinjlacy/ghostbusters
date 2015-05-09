@@ -1,0 +1,15 @@
+<template name="dashboard">
+	<div class="row">
+		<section class="col-sm-7">
+			<h2>Incoming Jobs</h2>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				{{#each jobs}}
+					{{> dashboardJobs}}
+				{{/each}}
+			</div>
+		</section>
+		<aside>
+			<h2>Ghostbusters Online</h2>
+		</aside>
+	</div>
+</template>

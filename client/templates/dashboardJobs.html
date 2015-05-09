@@ -1,0 +1,24 @@
+<template name="dashboardJobs">
+    <div class="panel panel-success animated">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#panel-{{_id}}" aria-expanded="true" aria-controls="collapseOne">
+		            {{description}}
+                </a>
+            </h4>
+        </div>
+        <div id="panel-{{_id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <label for="control-label">
+                    Assign this job?
+                </label>
+                <select name="{{_id}}" id="dashJob-{{_id}}" class="form-control">
+                    <option value="unassigned">---</option>
+                    {{#each ghostbusters}}
+                        <option value="{{_id}}">{{profile.firstName}} {{profile.lastName}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,30 @@
+<template name="jobs">
+    <table class="table table-bordered table-hover" id="jobTable">
+        <thead class="">
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>
+                Date
+            </td>
+            <td>
+                Assigned
+            </td>
+            <td>
+                Status
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+            {{#each jobs}}
+                <tr>
+                    <td>{{description}}</td>
+                    <td>{{prettifyDate submittedOn}}</td>
+                    <td>{{assignedFullName assignedTo}}</td>
+                    <td>{{readableStatus status}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

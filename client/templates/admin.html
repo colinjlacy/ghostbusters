@@ -1,0 +1,11 @@
+<template name="admin">
+	<h1>Admin Portal <small>Welcome {{user.firstName}}!</small></h1>
+    <hr/>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#" class="adminNav" name="dashboard">Dashboard</a></li>
+        <li role="presentation"><a href="#" class="adminNav" name="users">Users</a></li>
+        <li role="presentation"><a href="#" class="adminNav" name="jobs">Jobs</a></li>
+    </ul>
+    <hr/>
+    {{> Template.dynamic template=navigation}}
+</template>
